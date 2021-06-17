@@ -64,13 +64,13 @@ function keyPressed(){
   if(keyPressed === LEFT_ARROW ){
   mouse.addAnimation("mouseTeasing",mouse2Img);
   mouse.changeAnimation ("mouseTeasing");
-  mouse.framedelay= 25 ; 
+  mouse.frameDelay= 25 ; 
   }
  
   if (keyPressed === RIGHT_ARROW){
     mouse.addAnimation("mouseTeasing",mouse2Img);
-    mouse.chamgeAnination ("mouseTeasing");
-    mouse.framedelay= 25 ; 
+    mouse.chamgeAnimation ("mouseTeasing");
+    mouse.frameDelay= 25 ; 
   }
 
 
