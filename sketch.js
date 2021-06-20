@@ -65,7 +65,7 @@ function keyPressed(){
    cat.X velocity = -3
    cat.addAnimation("catImage2",cat2Img);
  cat.changeAnimation ("catImage");
-
+cat.frameDelay = 25 ;
   mouse.addAnimation("mouseTeasing",mouse2Img);
   mouse.changeAnimation ("mouseTeasing");
   mouse.frameDelay= 25 ; 
