@@ -32,7 +32,7 @@ function setup(){
     //create tom and jerry sprites here
     cat = createSprite(870, 600);
     cat.addAnimation("catSleeping", catImg1);
-    cat.Scale = 0.2;
+    cat.scale = 0.2;
 
     mouse = createSprite(200, 600);
     mouse.addAnimation("mouseStanding" , mouseImg1);
@@ -44,7 +44,7 @@ function draw() {
 
     background(backgroundImg);
     //Write condition here to evalute if tom and jerry collide
-    if (cat.x - mouse.x < (cat.width + mouse.width)/2 ){
+    if (cat.x + mouse.x < (cat.width - mouse.width)/2 ){
       cat.velocityX=0;
       cat.addAnimation("catlastImage",catImg3);
             cat.x =300;
@@ -61,15 +61,19 @@ function draw() {
 function keyPressed(){
 
   //For moving and changing animation write code here
-  if(keyPressed === LEFT_ARROW ){
+  if(keyCode === LEFT_ARROW ){
+   cat.velocity = -3
+   cat.addAnimation("catImage2",cat2Img);
+ cat.changeAnimation ("catImage");
+ cat.frameDelay= 25 ; 
   mouse.addAnimation("mouseTeasing",mouse2Img);
   mouse.changeAnimation ("mouseTeasing");
   mouse.frameDelay= 25 ; 
   }
  
-  if (keyPressed === RIGHT_ARROW){
+  if (keyCode === RIGHT_ARROW){
     mouse.addAnimation("mouseTeasing",mouse2Img);
-    mouse.chamgeAnimation ("mouseTeasing");
+    mouse.changeAnimation ("mouseTeasing");
     mouse.frameDelay= 25 ; 
   }
 
