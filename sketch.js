@@ -62,7 +62,7 @@ function keyPressed(){
 
   //For moving and changing animation write code here
   if(keyCode === LEFT_ARROW ){
-  cat.X velocity = -2
+  cat. velocityX = -2
   cat.addAnimation("catImage2",cat2Img);
  cat.changeAnimation ("catImage");
 
